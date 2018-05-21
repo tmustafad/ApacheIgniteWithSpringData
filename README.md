@@ -35,6 +35,7 @@ For configuring Apache ignite, we have created a spring bean where an ignite nod
 		cfg.setCacheConfiguration(new CacheConfiguration[] { ccfgDog, ccfgBreed });
 		return Ignition.start(cfg);
 	}
+	
 	```
 	
 
