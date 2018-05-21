@@ -28,13 +28,13 @@ For starting the app, An AppStarter class is created and a spring context is ini
 		cfg.setIgniteInstanceName("springDataNode");
 		cfg.setPeerClassLoadingEnabled(true);
 
-		CacheConfiguration ccfgDog = new CacheConfiguration("departmentCache");
-		CacheConfiguration ccfgBreed = new CacheConfiguration("employeeCache");
+		CacheConfiguration ccfgdept = new CacheConfiguration("departmentCache");
+		CacheConfiguration ccfgemp = new CacheConfiguration("employeeCache");
 		
 		
-		ccfgBreed.setIndexedTypes(Long.class, Employee.class);
-		ccfgDog.setIndexedTypes(Long.class, Department.class);
-		cfg.setCacheConfiguration(new CacheConfiguration[] { ccfgDog, ccfgBreed });
+		ccfgemp.setIndexedTypes(Long.class, Employee.class);
+		ccfgdept.setIndexedTypes(Long.class, Department.class);
+		cfg.setCacheConfiguration(new CacheConfiguration[] { ccfgdept, ccfgemp });
 		return Ignition.start(cfg);
 	}
 	
