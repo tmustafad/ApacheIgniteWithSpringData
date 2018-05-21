@@ -18,6 +18,8 @@ For these two model classes ,two corresponding apache ignite repositories are cr
 
 For configuring Apache ignite, we have created a spring bean where an ignite node is configured and started. below is the piece of code where the ignite config is achieved. In the code below , two cache is created corresponding the model classes and the ignite node started.
 
+For starting the app, An AppStarter class is created and a spring context is initialized where we register our repositories to context and use them to add sample data to ignite cache and retrieve data afterwards. This can be observed in Appstarter.class
+
 ```
 @SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
