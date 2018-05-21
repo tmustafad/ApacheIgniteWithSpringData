@@ -40,6 +40,8 @@ For configuring Apache ignite, we have created a spring bean where an ignite nod
 
 For starting the app, the AppStarter class is created in src package and in there spring context is initialized and the necessary beans such as ignite repositories are registered to context and then sample data is put to ignite cache and then it is retrieved .
 
+
+
 ```
 private static final Logger logger=LoggerFactory.getLogger(AppStarter.class);
 	private static AnnotationConfigApplicationContext ctx;
@@ -83,5 +85,5 @@ private static final Logger logger=LoggerFactory.getLogger(AppStarter.class);
 			System.out.println("Employe:" + employee);
 		}
 	}
-	
 	```
+	
