@@ -5,6 +5,8 @@ package com.turkmen.ignite;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.turkmen.ignite.model.Department;
@@ -18,6 +20,7 @@ import com.turkmen.ignite.repository.EmployeeRepository;
  */
 public class AppStarter {
 
+	private static final Logger logger=LoggerFactory.getLogger(AppStarter.class);
 	private static AnnotationConfigApplicationContext ctx;
 
 	private static EmployeeRepository employeeRepository;
@@ -33,6 +36,7 @@ public class AppStarter {
 		employeeRepository = ctx.getBean(EmployeeRepository.class);
 		departmentRepository = ctx.getBean(DepartmentRepository.class);
 
+		logger.info("ctx refreshed and repositories are captured....");
 		Department it = new Department();
 		it.setId(Long.valueOf(1));
 		it.setName("IT");
