@@ -29,13 +29,13 @@ public class AppConfig {
 		cfg.setIgniteInstanceName("springDataNode");
 		cfg.setPeerClassLoadingEnabled(true);
 
-		CacheConfiguration ccfgDog = new CacheConfiguration("departmentCache");
-		CacheConfiguration ccfgBreed = new CacheConfiguration("employeeCache");
+		CacheConfiguration ccfgemp = new CacheConfiguration("departmentCache");
+		CacheConfiguration ccfgdept = new CacheConfiguration("employeeCache");
 		
 		
-		ccfgBreed.setIndexedTypes(Long.class, Employee.class);
-		ccfgDog.setIndexedTypes(Long.class, Department.class);
-		cfg.setCacheConfiguration(new CacheConfiguration[] { ccfgDog, ccfgBreed });
+		ccfgemp.setIndexedTypes(Long.class, Employee.class);
+		ccfgdept.setIndexedTypes(Long.class, Department.class);
+		cfg.setCacheConfiguration(new CacheConfiguration[] { ccfgemp, ccfgdept });
 		return Ignition.start(cfg);
 	}
 
