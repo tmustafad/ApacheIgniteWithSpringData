@@ -10,10 +10,3 @@ The project is structured with maven. For achieving the interactions between **I
 			<version>2.0.0</version>
 			</dependency>
 			```
-		
-    
-    
-    After this dependency is added ,we have the ability to use special **IgniteRepository** interface which is extending Spring Data **CrudRepository** . 
-    ###### As it can be seen in the package structure, every model class has its own ignite repository.
-    
-    
