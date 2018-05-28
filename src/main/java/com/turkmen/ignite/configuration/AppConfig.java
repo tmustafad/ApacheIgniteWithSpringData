@@ -19,7 +19,7 @@ import com.turkmen.ignite.model.Employee;
  *
  */
 @Configuration
-@EnableIgniteRepositories
+@EnableIgniteRepositories(basePackages="com.turkmen.ignite.repository")
 public class AppConfig {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

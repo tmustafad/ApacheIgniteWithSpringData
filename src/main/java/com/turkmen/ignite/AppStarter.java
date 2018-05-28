@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.turkmen.ignite.configuration.AppConfig;
 import com.turkmen.ignite.model.Department;
 import com.turkmen.ignite.model.Employee;
 import com.turkmen.ignite.repository.DepartmentRepository;
@@ -30,7 +31,7 @@ public class AppStarter {
 	public static void main(String[] args) {
 
 		ctx = new AnnotationConfigApplicationContext();
-		ctx.register(AppStarter.class);
+		ctx.register(AppConfig.class);
 		ctx.refresh();
 		
 		employeeRepository = ctx.getBean(EmployeeRepository.class);
